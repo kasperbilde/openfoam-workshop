@@ -6,6 +6,11 @@ title: 17th OpenFOAM Workshop
 paginate: true
 # backgroundImage: url('https://marp.app/assets/hero-background.svg')
 math: katex
+"markdown.marp.enableHtml": true
+# style: |
+#   video::-webkit-media-controls {
+#     will-change: transform;
+#   }
 ---
 
 # Particle aggregation and breakage using `multiphaseEulerFoam`
@@ -110,7 +115,10 @@ img[alt~="center"] {
 
 ---
 # Development work
-https://user-images.githubusercontent.com/66301490/172621776-729b366b-45f1-4094-88d8-f052a483275d.mp4
+<video controls width=100%>
+    <source src="https://user-images.githubusercontent.com/66301490/172621776-729b366b-45f1-4094-88d8-f052a483275d.mp4"
+            type="video/mp4">
+</video>
 
 
 ---
