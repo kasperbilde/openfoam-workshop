@@ -20,11 +20,11 @@ Kasper Bilde
 Kasper Bilde
 Industrial PhD Student
 Aalborg University and Alfa Laval
+**Supervisors**: Kim Sørensen and Jakob Hærvig
 
 **PhD Scope**: Agglomeration and breakage of micron-sized particles in turbulent flows for highly accelerated sedimentation
 
 ---
-<!-- NOTE: NOT COMPLETE! -->
 # Background
 ![bg right:66% 60%](visuals/mesh.svg)
 Study the particle size distribution through pipe bends
@@ -90,8 +90,18 @@ where $r_\mathrm{c}$ is the collision radius of a particle.
 
 
 ---
-# Case setup
+# Particle phase properties
 
+
+---
+# Results
+
+![height:525px](visuals/d32_layer.svg "Title") ![height:525px](visuals/d32.png)
+
+
+---
+# Acknowledgements
+A big thank you to Dr. Ronald Lehnigk and Dr. Fabian Schlegel from Helmholtz-Zentrum Dresden Rossendorf as well as Anders Schou Simonsen for their assistance in the development of this work.
 
 ---
 
