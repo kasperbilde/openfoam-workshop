@@ -110,7 +110,7 @@ img[alt~="center"] {
 
 ---
 # Development work
-![](visuals/matlabConfigurator.mp4)
+https://user-images.githubusercontent.com/66301490/172621776-729b366b-45f1-4094-88d8-f052a483275d.mp4
 
 
 ---
