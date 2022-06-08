@@ -2,8 +2,8 @@
 marp: true
 theme: default
 _class: lead
+title: 17th OpenFOAM Workshop
 paginate: true
-backgroundColor: #fff
 # backgroundImage: url('https://marp.app/assets/hero-background.svg')
 math: katex
 ---
@@ -25,7 +25,7 @@ Aalborg University and Alfa Laval
 
 ---
 <!-- NOTE: NOT COMPLETE! -->
-# Background
+# <! --fit--> Background
 ![bg right:66% 60%](visuals/mesh.svg)
 Study the particle size distribution through pipe bends
 
