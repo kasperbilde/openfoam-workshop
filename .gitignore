@@ -1,2 +1,4 @@
 # Files to be ignored
 *.ai
+*.mat
+*.fig

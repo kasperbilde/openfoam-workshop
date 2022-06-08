@@ -52,7 +52,7 @@ where $\boldsymbol{M}_\varphi$ is the momentum exchange at the interfaces and $\
 <!-- CONSIDER ADDING REFERENCES -->
 Momentum exchange at the interfaces is the sum of external force
 $$
-\boldsymbol{M}_\varphi = \sum_{\varphi=0,\varphi\neq\psi}^{N}\left( \underbrace{F_{D,\varphi,\psi}}_{\text{Wen-Yu drag}^1}+\underbrace{F_{L,\varphi,\psi}}_{\text{Saffman-Mei lift}}+\underbrace{F_{TD\varphi,\psi}}_{\text{Turbulent dispersion}}+\underbrace{F_{VM,\varphi,\psi}}_{\text{Virtual mass}}\right)
+\boldsymbol{M}_\varphi = \sum_{\varphi=0,\varphi\neq\psi}^{N}\left( \underbrace{F_{D,\varphi,\psi}}_{\text{Wen-Yu drag}}+\underbrace{F_{L,\varphi,\psi}}_{\text{Saffman-Mei lift}}+\underbrace{F_{TD\varphi,\psi}}_{\text{Turbulent dispersion}}+\underbrace{F_{VM,\varphi,\psi}}_{\text{Virtual mass}}\right)
 $$
 
 *Saffman-Mei lift force* [*committed*](https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc) *to `OpenFOAM-dev`*
@@ -98,6 +98,20 @@ where $r_\mathrm{c}$ is the collision radius of a particle.
 
 ![height:525px](visuals/d32_layer.svg "Title") ![height:525px](visuals/d32.png)
 
+---
+# Particle size distribution
+<style>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
+![w:800 center](visuals/psd.svg)
+
+---
+# Development work
+![](visuals/matlabConfigurator.mp4)
+
 
 ---
 # Acknowledgements
@@ -111,7 +125,7 @@ The presented material is available as a tutorial of the OpenFOAM Foundation.
 Particle agglomeration, breakage and lift force for `multiphaseEulerFoam`
 https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc
 
-The tutorial of the pipe bend:
+The tutorial of the pipe bend is [committed](https://github.com/OpenFOAM/OpenFOAM-dev/commit/0999cd0efea8811f6d98c631f5ff3a53f6efb2d9) to `OpenFOAM-dev`:
 ```
 $FOAM_TUTORIALS/multiphase/multiphaseEulerFoam/RAS/pipeBend
 ```
