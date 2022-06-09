@@ -60,12 +60,12 @@ $$
 
 ---
 # Population balance equation
-Tracking the particle number density function using class method implementation of Lehnigk et al. (2021).
-
+The population balance equation,
 $$
-\frac{\partial}{\partial t} n_v+\nabla\cdot\left(\boldsymbol{u}_\mathrm{p}n_v \right) = S_v
+\frac{\partial}{\partial t} n_v+\nabla\cdot\left(\boldsymbol{u}_\mathrm{p}n_v \right) = S_v\,,
 $$
-where the source term, $S_v$ accounts for the discontinuous changes from aggregation and breakage.
+tracks the number density function. The PBE is solved by the class method which was implemented into `multiphaseEulerFoam` by Lehnigk et al. (2021).
+Discontinuous changes due to aggregation and breakage are accounted for by the source term, $S_v$.
 
 ---
 # Aggregation kernel
@@ -92,7 +92,7 @@ where $B$ is the particle strength parameter and $r_\mathrm{c}$ is the collision
 
 ---
 # Simulation properties
-
+# DETTE KAN VIST VISES PÅ EN FIGUR!
 | Property      | Symbol          | Value | Unit |
 |---------------|-----------------|-------|------|
 | Fluid Reynolds number | Re$_\mathrm{f}$ | 10,000 | - |
