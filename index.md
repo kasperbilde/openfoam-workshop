@@ -6,9 +6,13 @@ title: 17th OpenFOAM Workshop
 paginate: true
 # backgroundImage: url('https://marp.app/assets/hero-background.svg')
 math: katex
-"markdown.marp.enableHtml": true
 ---
-
+<style>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
 # Particle aggregation and breakage using `multiphaseEulerFoam`
 A CFD-PBM approach
 Kasper Bilde
@@ -27,8 +31,23 @@ Aalborg University and Alfa Laval
 
 ---
 # Background
-![bg right:66% 60%](visuals/mesh.svg)
-Study the particle size distribution through pipe bends
+![bg right:40% 80%](visuals/scrubber.svg)
+Marine scrubbers clean the exhaust gas from the engine for SOx and ~40% of the particulate mass.
+The particulate matter needs to be removed before discharged into the Oceans.
+
+---
+# Motivation
+![bg right:40% 80%](visuals/2-phase_HSS.svg)
+As space is limited onboard a vessel, high-speed separators are utilised for an accelerated sedimentation.
+The particle size is the most important parameter for sedimentation.
+Particles are aggregated using a hydraulic flocculator.
+
+---
+# Computational domain
+![bg right:50% 80%](visuals/mesh.svg)
+Designing a compact hydraulic flocculator and achieving the largest possible particle size distribution.
+
+Analyse the particle size distribution through a 90° pipe bend.
 
 ---
 # Governing equations
@@ -56,7 +75,7 @@ $$
 \boldsymbol{M}_\varphi = \sum_{\varphi=0,\varphi\neq\psi}^{N}\left( \underbrace{F_{D,\varphi,\psi}}_{\text{Wen-Yu drag}}+\underbrace{F_{L,\varphi,\psi}}_{\text{Saffman-Mei lift}}+\underbrace{F_{TD\varphi,\psi}}_{\text{Turbulent dispersion}}+\underbrace{F_{VM,\varphi,\psi}}_{\text{Virtual mass}}\right)
 $$
 
-*Saffman-Mei lift force* [*committed*](https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc) *to `OpenFOAM-dev`*
+*Saffman-Mei lift force* <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">*comitted*</a> *to `OpenFOAM-dev`*
 
 ---
 # Population balance equation
@@ -64,12 +83,12 @@ The population balance equation,
 $$
 \frac{\partial}{\partial t} n_v+\nabla\cdot\left(\boldsymbol{u}_\mathrm{p}n_v \right) = S_v\,,
 $$
-tracks the number density function. The PBE is solved by the class method which was implemented into `multiphaseEulerFoam` by Lehnigk et al. (2021).
+tracks the number density function. The PBE is solved by the class method which was implemented into `multiphaseEulerFoam` by <a href="https://doi.org/10.1002/aic.17539" target="_blank">Lehnigk et al. (2021)</a>.
 Discontinuous changes due to aggregation and breakage are accounted for by the source term, $S_v$.
 
 ---
 # Aggregation kernel
-The aggregation kernel for solid particles by Adachi et al. (1994) is [implemented](https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc) into `OpenFOAM-dev`.
+The aggregation kernel for solid particles by <a href="https://doi.org/10.1006/JCIS.1994.1234" target="_blank">Adachi et al. (1994)</a> is <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">implemented</a> into `OpenFOAM-dev`.
 $$
 a_{d,d^\prime} = \frac{4}{3}\sqrt{\frac{3\pi}{10}}\sqrt{\frac{\varepsilon}{\nu}}\left(d+d^\prime\right)^3
 $$
@@ -78,7 +97,7 @@ where $d$ and $d^\prime$ are the diameters of two colliding particles.
 
 ---
 # Breakage kernel
-The breakage kernel for solid particles by Kusters (1991) is [implemented](https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc) into `OpenFOAM-dev`.
+The breakage kernel for solid particles by <a href="https://doi.org/10.6100/IR362582" target="_blank">Kusters (1991)</a> is <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">implemented</a> into `OpenFOAM-dev`.
 
 $$
 b_{v^\prime} = \sqrt{\frac{4}{15\pi}}\sqrt{\frac{\varepsilon}{\nu}}\exp\left(-\frac{\varepsilon_\mathrm{cr}}{\varepsilon}\right)
@@ -89,39 +108,16 @@ $$
 $$
 where $B$ is the particle strength parameter and $r_\mathrm{c}$ is the collision radius of a particle.
 
-
 ---
 # Simulation properties
-# DETTE KAN VIST VISES PÅ EN FIGUR!
-| Property      | Symbol          | Value | Unit |
-|---------------|-----------------|-------|------|
-| Fluid Reynolds number | Re$_\mathrm{f}$ | 10,000 | - |
-| Density ratio | $\rho_p/\rho_f$ | 1.4   | -    |
-| Kinematic viscosity | $\nu$ | $10^{-6}$      | m$^2$/s |
-| Particle size range | $d_\mathrm{p}$ | $1\leq d_\mathrm{p} \leq 250$ | µm |
-| Number of size classes | $n$ | 30 | - |
-| Strength parameter | $B$ | $5\cdot10^-6$ | m$^3$/s$^3$ |
-
----
-# Simulation parameters
-Boundary conditions:
-- Plug flow of $\bar{\boldsymbol{u}}_f=0.5$ m/s at inlet
-- No-slip condition at the walls
--
+![width:1050px](visuals/bcs.svg)
 
 ---
 # Results
-
 ![height:525px](visuals/d32_layer.svg "Layer averaged Sauter mean diameter") ![height:525px](visuals/d32.png "Contour plot of the symmetric plane of the Sauter mean diameter")
 
 ---
 # Particle size distribution
-<style>
-img[alt~="center"] {
-  display: block;
-  margin: 0 auto;
-}
-</style>
 ![w:800 center](visuals/psd.svg)
 
 ---
@@ -131,26 +127,33 @@ img[alt~="center"] {
             type="video/mp4">
 </video>
 
-
 ---
-# Acknowledgements
-A big thank you to Dr. Ronald Lehnigk and Dr. Fabian Schlegel from Helmholtz-Zentrum Dresden Rossendorf as well as Anders Schou Simonsen for their assistance in the development of this work.
+# Closing remarks
+The CFD-PBE framework allows to directly analyse the particle size distribution within the domain.
+
+It is visible how the particles aggregate in the straight turbulent pipe and break up when subject to the sharp curvature of the bend.
+
+On-going work is made to determine the best suited desing for marine installation for effective accelerated sedimentation.
 
 ---
 
 # Source files
-The presented material is available as a tutorial of the OpenFOAM Foundation.
+The presented 90° pipe bend is <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/0999cd0efea8811f6d98c631f5ff3a53f6efb2d9" target="_blank">comitted</a> to `OpenFOAM-dev` of OpenFOAM Foundation.
 
-Particle agglomeration, breakage and lift force for `multiphaseEulerFoam`
-https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc
-
-The tutorial of the pipe bend is [committed](https://github.com/OpenFOAM/OpenFOAM-dev/commit/0999cd0efea8811f6d98c631f5ff3a53f6efb2d9) to `OpenFOAM-dev`:
+The tutorial is located under the `multiphaseEulerFoam` tutorials.
 ```
 $FOAM_TUTORIALS/multiphase/multiphaseEulerFoam/RAS/pipeBend
 ```
+The Saffman-Mei lift force model, the aggregation kernel and the breakage kernel are also <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">comitted</a> to `OpenFOAM-dev`.
+
+
+---
+# Acknowledgements
+A big thank you to Dr. Ronald Lehnigk and Dr. Fabian Schlegel from Helmholtz-Zentrum Dresden Rossendorf as well as Anders Schou Simonsen from Alfa Laval for their assistance in the development of this work.
 
 ---
 # References
 1. Adachi, Y., Cohen Stuart, M. A., & Fokkink, R. (1994). Kinetics of Turbulent Coagulation Studied by Means of End-over-End Rotation. Journal of Colloid and Interface Science, 165(2), 310–317. https://doi.org/10.1006/JCIS.1994.1234
 1. Kusters, K. A. (1991). The influence of turbulence on aggregation of small particles in agitated vessels [Technische Universiteit Eindhoven]. https://doi.org/10.6100/IR362582
 1. Lehnigk, R., Bainbridge, W., Liao, Y., Lucas, D., Niemi, T., Peltola, J., & Schlegel, F. (2021). An open-source population balance modeling framework for the simulation of polydisperse multiphase flows. AIChE Journal, e17539. https://doi.org/10.1002/AIC.17539
+1. Simonsen, A. S. (2018). Modelling and Analysis of Seawater Scrubbers for Reducing SOx Emissions from Marine Engines. Aalborg Universitetsforlag.
