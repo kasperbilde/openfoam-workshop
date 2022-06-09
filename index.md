@@ -127,7 +127,7 @@ img[alt~="center"] {
 ---
 # Development work
 <video controls width=100%>
-    <source src="https://user-images.githubusercontent.com/66301490/172785685-848871b5-bb5d-48ae-9fd0-a80b03bda070.mp4"
+    <source src="visuals/developmentwork.mp4"
             type="video/mp4">
 </video>
 

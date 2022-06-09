@@ -2,3 +2,6 @@
 *.ai
 *.mat
 *.fig
+visuals/BCs.png
+visuals/mesh.png
+visuals/meshCrossSection.png
