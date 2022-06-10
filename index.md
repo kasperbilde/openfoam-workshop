@@ -40,9 +40,17 @@ The particulate matter needs to be removed before discharged into the Oceans.
 ![bg right:40% 80%](visuals/2-phase_HSS.svg)
 As space is limited onboard a vessel, high-speed separators are utilised for an accelerated sedimentation.
 The particle size is the most important parameter for sedimentation.
-Particles are aggregated using a hydraulic flocculator.
+
 
 ---
+# Motivation
+Micron-sized particles are agglomerated in a hydraulic flocculator before separation in the high-speed separator.
+
+
+![width=100%](visuals/process.svg)
+
+---
+
 # Computational domain
 ![bg right:50% 80%](visuals/mesh.svg)
 Designing a compact hydraulic flocculator and achieving the largest possible particle size distribution.
@@ -135,6 +143,8 @@ It is visible how the particles aggregate in the straight turbulent pipe and bre
 
 On-going work is made to determine the best suited desing for marine installation for effective accelerated sedimentation.
 
+Optimising the flocculation system allows for less pollutants discharged to the Oceans.
+
 ---
 
 # Source files
@@ -150,6 +160,16 @@ The Saffman-Mei lift force model, the aggregation kernel and the breakage kernel
 ---
 # Acknowledgements
 A big thank you to Dr. Ronald Lehnigk and Dr. Fabian Schlegel from Helmholtz-Zentrum Dresden Rossendorf as well as Anders Schou Simonsen from Alfa Laval for their assistance in the development of this work.
+
+---
+# Thank you for your attention.
+
+If you have any question, feel free to ask or reach out.
+
+Email: kaspergram.bilde@alfalaval.com
+
+
+[![width:200px](visuals/github_kasperbilde.svg)](https://github.com/yhatt/marp-cli-example/generate)
 
 ---
 # References
