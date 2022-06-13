@@ -27,7 +27,7 @@ Industrial PhD Student
 Aalborg University and Alfa Laval
 **Supervisors**: Kim Sørensen and Jakob Hærvig
 
-**PhD Scope**: Aggregation and breakage of micron-sized particles in turbulent flows for highly accelerated sedimentation
+**PhD Scope**: Aggregation and breakage of micron-sized particles in turbulent flows for highly accelerated sedimentation onboard marine vessels
 
 ---
 # Background
@@ -38,16 +38,18 @@ The particulate matter needs to be removed before discharged into the Oceans.
 ---
 # Motivation
 ![bg right:40% 80%](visuals/2-phase_HSS.svg)
-As space is limited onboard a vessel, high-speed separators are utilised for an accelerated sedimentation.
+High-speed separators are utilised for an accelerated sedimentation.
 The particle size is the most important parameter for sedimentation.
 
-
+<!-- Space is limited onboard the vessel. Settling tanks cannot be used due to large space and poor efficiency during rough sea. -->
 ---
 # Motivation
 Micron-sized particles are agglomerated in a hydraulic flocculator before separation in the high-speed separator.
 
 
 ![width=100%](visuals/process.svg)
+<!-- Water cleaning system must be compact. -->
+<!-- Particles are agglomerated in a static flocculator consisting of a series of pipe bends. -->
 
 ---
 
@@ -56,7 +58,7 @@ Micron-sized particles are agglomerated in a hydraulic flocculator before separa
 Designing a compact hydraulic flocculator and achieving the largest possible particle size distribution.
 
 Analyse the particle size distribution through a 90° pipe bend.
-
+<!-- As the particle size is the most dominating factor in terms of separation efficiency, how can larger particles be produced while maintaining a compact formfactor of the flocculator? -->
 ---
 # Governing equations
 Euler-Euler approach using the population balance equations to track the particle size distribution
@@ -74,10 +76,11 @@ $$
 $$
 
 where $\boldsymbol{M}_\varphi$ is the momentum exchange at the interfaces and $\boldsymbol{S}_\varphi$ is the source term.
+<!-- Phases share same pressure. -->
+<!-- Stress tensor can include particle collision model (kinetic theory of granular flows) for disperse phase -->
 
 ---
 # Governing equations
-<!-- CONSIDER ADDING REFERENCES -->
 Momentum exchange at the interfaces is the sum of external force
 $$
 \boldsymbol{M}_\varphi = \sum_{\varphi=0,\varphi\neq\psi}^{N}\left( \underbrace{F_{D,\varphi,\psi}}_{\text{Wen-Yu drag}}+\underbrace{F_{L,\varphi,\psi}}_{\text{Saffman-Mei lift}}+\underbrace{F_{TD\varphi,\psi}}_{\text{Turbulent dispersion}}+\underbrace{F_{VM,\varphi,\psi}}_{\text{Virtual mass}}\right)
@@ -94,6 +97,10 @@ $$
 tracks the number density function. The PBE is solved by the class method which was implemented into `multiphaseEulerFoam` by <a href="https://doi.org/10.1002/aic.17539" target="_blank">Lehnigk et al. (2021)</a>.
 Discontinuous changes due to aggregation and breakage are accounted for by the source term, $S_v$.
 
+<!-- Class method needs knowledge about the size range. -->
+<!-- Population balance equation solved for each size class -->
+<!-- Computational expensive, but provides direct knowledge about the shape of the particle size distribution -->
+<!-- This also makes this method quite intuitive compared to other methods. Personal view. -->
 ---
 # Aggregation kernel
 The aggregation kernel for solid particles by <a href="https://doi.org/10.1006/JCIS.1994.1234" target="_blank">Adachi et al. (1994)</a> is <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">implemented</a> into `OpenFOAM-dev`.
@@ -115,7 +122,7 @@ $$
 \varepsilon_\mathrm{cr} =\frac{B}{r_\mathrm{c}}\,,
 $$
 where $B$ is the particle strength parameter and $r_\mathrm{c}$ is the collision radius of a particle.
-
+<!-- Same factor driving both aggregation and breakage. -->
 ---
 # Simulation properties
 ![width:1050px](visuals/bcs.svg)
@@ -168,8 +175,11 @@ If you have any question, feel free to ask or reach out.
 
 Email: kaspergram.bilde@alfalaval.com
 
+Presentation is available at GitHub.
 
-[![width:200px](visuals/github_kasperbilde.svg)](https://github.com/yhatt/marp-cli-example/generate)
+**Socials**
+<a href="https://www.linkedin.com/in/kasper-gram-bilde/" target="_blank">![height:50px](visuals/linkedin.svg)</a>
+<a href="https://github.com/kasperbilde/openfoam-workshop" target="_blank">![height:50px](visuals/github_kasperbilde.svg)</a>
 
 ---
 # References
