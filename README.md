@@ -33,5 +33,10 @@ $FOAM_SOLVERS/multiphase/multiphaseEulerFoam/phaseSystems/populationBalanceModel
 ```
 
 ## Socials
-<a href="https://www.linkedin.com/in/kasper-gram-bilde/" target="_blank"><img src="visuals/linkedin.svg" alt="LinkedIn" height="30"/></a>
+<a
+    href="https://www.linkedin.com/in/kasper-gram-bilde/" target="_blank">
+    <p>
+        <img src="visuals/linkedin.svg" alt="LinkedIn" height="30"/>
+    </p>
+</a>
 <a href="https://www.github.com/kasperbilde/" target="_blank"><img src="visuals/github_kasperbilde.svg" alt="LinkedIn" height="30"/></a>
