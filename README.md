@@ -1,11 +1,13 @@
 # Presentation
-[**Click here**](https://kasperbilde.github.io/openfoam-workshop/) to start the presentation
+[**Click here**](https://kasperbilde.github.io/openfoam-workshop/) to start the presentation.
 
 This my presentation for the [17th OpenFOAM Workshok](https://openfoamworkshop.org/) at Cambridge University.
 
 The topic of the presentation is on aggregation and breakage of solid particles through a turbulent 90° pipe bend.
 
 The workshop presentation was held July 13th, 2022.
+
+You can also download the PDF version [here](https://github.com/kasperbilde/openfoam-workshop/raw/main/index.pdf).
 
 ## About
 The presentation is made using the [Marp](marp.app) Markdown Presentaiton Ecosystem.
