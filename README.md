@@ -1,9 +1,11 @@
 # Presentation
-[Click here](https://kasperbilde.github.io/openfoam-workshop/) to start the presentation
+[**Click here**](https://kasperbilde.github.io/openfoam-workshop/) to start the presentation
 
-This my presentation for the 17th OpenFOAM Workshop at Cambridge University.
+This my presentation for the [17th OpenFOAM Workshok](https://openfoamworkshop.org/) at Cambridge University.
 
 The topic of the presentation is on aggregation and breakage of solid particles through a turbulent 90° pipe bend.
+
+The workshop presentation was held July 13th, 2022.
 
 ## About
 The presentation is made using the [Marp](marp.app) Markdown Presentaiton Ecosystem.
@@ -29,3 +31,7 @@ Breakage kernel:
 ```
 $FOAM_SOLVERS/multiphase/multiphaseEulerFoam/phaseSystems/populationBalanceModel/breakupModels/Kusters
 ```
+
+## Socials
+<a href="https://www.linkedin.com/in/kasper-gram-bilde/" target="_blank"><img src="visuals/linkedin.svg" alt="LinkedIn" height="30"/></a>
+<a href="https://www.github.com/kasperbilde/" target="_blank"><img src="visuals/github_kasperbilde.svg" alt="LinkedIn" height="30"/></a>
