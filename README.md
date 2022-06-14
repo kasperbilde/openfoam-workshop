@@ -31,14 +31,3 @@ Breakage kernel:
 ```
 $FOAM_SOLVERS/multiphase/multiphaseEulerFoam/phaseSystems/populationBalanceModel/breakupModels/Kusters
 ```
-
-## Socials
-<a
-    href="https://www.linkedin.com/in/kasper-gram-bilde/" target="_blank">
-    <p>
-        <img src="https://github.com/kasperbilde/openfoam-workshop/blob/main/visuals/linkedin.svg" alt="LinkedIn" height="30"/>
-    </p>
-</a>
-<a href="https://www.github.com/kasperbilde/" target="_blank"><img src="https://github.com/kasperbilde/openfoam-workshop/blob/main/visuals/github_kasperbilde.svg" alt="GitHub" height="30"/></a>
-
-![LinkedIn](/visuals/linkedin.svg)
