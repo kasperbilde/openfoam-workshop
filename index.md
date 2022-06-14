@@ -86,7 +86,7 @@ $$
 \boldsymbol{M}_\varphi = \sum_{\varphi=0,\varphi\neq\psi}^{N}\left( \underbrace{F_{D,\varphi,\psi}}_{\text{Wen-Yu drag}}+\underbrace{F_{L,\varphi,\psi}}_{\text{Saffman-Mei lift}}+\underbrace{F_{TD\varphi,\psi}}_{\text{Turbulent dispersion}}+\underbrace{F_{VM,\varphi,\psi}}_{\text{Virtual mass}}\right)
 $$
 
-*Saffman-Mei lift force* <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">*comitted*</a> *to `OpenFOAM-dev`*
+*Saffman-Mei lift force* <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">*published*</a> *to `OpenFOAM-dev`*
 
 ---
 # Population balance equation
@@ -155,13 +155,13 @@ Optimising the flocculation system allows for less pollutants discharged to the 
 ---
 
 # Source files
-The presented 90° pipe bend is <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/0999cd0efea8811f6d98c631f5ff3a53f6efb2d9" target="_blank">comitted</a> to `OpenFOAM-dev` of OpenFOAM Foundation.
+The presented 90° pipe bend is <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/0999cd0efea8811f6d98c631f5ff3a53f6efb2d9" target="_blank">published</a> to `OpenFOAM-dev` of OpenFOAM Foundation.
 
 The tutorial is located under the `multiphaseEulerFoam` tutorials.
 ```
 $FOAM_TUTORIALS/multiphase/multiphaseEulerFoam/RAS/pipeBend
 ```
-The Saffman-Mei lift force model, the aggregation kernel and the breakage kernel are also <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">comitted</a> to `OpenFOAM-dev`.
+The Saffman-Mei lift force model, the aggregation kernel and the breakage kernel are also <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">published</a> to `OpenFOAM-dev`.
 
 
 ---
