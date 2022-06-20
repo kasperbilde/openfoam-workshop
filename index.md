@@ -60,6 +60,12 @@ Designing a compact hydraulic flocculator and achieving the largest possible par
 Analyse the particle size distribution through a 90° pipe bend.
 <!-- As the particle size is the most dominating factor in terms of separation efficiency, how can larger particles be produced while maintaining a compact formfactor of the flocculator? -->
 ---
+# Numerical method
+![width:100%](visuals/euler-vs-lagrange.svg)
+<!-- Bottle neck with the Euler-Lagrangian approach is that the Lagrangian points easily exceeds 1 billion for industrial applications -->
+<!-- Euler-Euler approach is limited to the cell count. -->
+
+---
 # Governing equations
 Euler-Euler approach using the population balance equations to track the particle size distribution
 
@@ -78,6 +84,7 @@ $$
 where $\boldsymbol{M}_\varphi$ is the momentum exchange at the interfaces and $\boldsymbol{S}_\varphi$ is the source term.
 <!-- Phases share same pressure. -->
 <!-- Stress tensor can include particle collision model (kinetic theory of granular flows) for disperse phase -->
+
 
 ---
 # Governing equations
