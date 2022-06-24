@@ -24,7 +24,7 @@ Kasper Bilde
 ![bg 80%](visuals/alfa-laval-logo.svg)
 Kasper Bilde
 Industrial PhD Student
-Aalborg University and Alfa Laval
+Aalborg University, Denmark
 **Supervisors**: Kim Sørensen and Jakob Hærvig
 
 **PhD Scope**: Aggregation and breakage of micron-sized particles in turbulent flows for highly accelerated sedimentation onboard marine vessels
