@@ -157,8 +157,6 @@ It is visible how the particles aggregate in the straight turbulent pipe and bre
 
 On-going work is made to determine the best suited desing for marine installation for effective accelerated sedimentation.
 
-Optimising the flocculation system allows for less pollutants discharged to the Oceans.
-
 ---
 
 # Source files
