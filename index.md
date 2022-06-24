@@ -178,7 +178,7 @@ A big thank you to Dr. Ronald Lehnigk and Dr. Fabian Schlegel from Helmholtz-Zen
 
 If you have any question, feel free to ask or reach out.
 
-Email: kaspergram.bilde@alfalaval.com
+Email: kgb@energy.aau.dk
 
 Presentation is available at GitHub.
 
