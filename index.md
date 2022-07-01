@@ -155,7 +155,7 @@ The CFD-PBE framework allows to directly analyse the particle size distribution 
 
 It is visible how the particles aggregate in the straight turbulent pipe and break up when subject to the sharp curvature of the bend.
 
-On-going work is made to determine the best suited desing for marine installation for effective accelerated sedimentation.
+On-going work is made to determine the best suited design for marine installation for effective accelerated sedimentation.
 
 ---
 
