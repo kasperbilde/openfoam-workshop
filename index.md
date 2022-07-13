@@ -93,7 +93,7 @@ $$
 \boldsymbol{M}_\varphi = \sum_{\varphi=0,\varphi\neq\psi}^{N}\left( \underbrace{F_{D,\varphi,\psi}}_{\text{Wen-Yu drag}}+\underbrace{F_{L,\varphi,\psi}}_{\text{Saffman-Mei lift}}+\underbrace{F_{TD\varphi,\psi}}_{\text{Turbulent dispersion}}+\underbrace{F_{VM,\varphi,\psi}}_{\text{Virtual mass}}\right)
 $$
 
-*Saffman-Mei lift force* <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">*published*</a> *to OpenFOAM 10*
+*Saffman-Mei lift force* <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">*published*</a> *to OpenFOAM v10*
 
 ---
 # Population balance equation
@@ -110,7 +110,7 @@ Discontinuous changes due to aggregation and breakage are accounted for by the s
 <!-- This also makes this method quite intuitive compared to other methods. Personal view. -->
 ---
 # Aggregation kernel
-The aggregation kernel for solid particles by <a href="https://doi.org/10.1006/JCIS.1994.1234" target="_blank">Adachi et al. (1994)</a> is <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">implemented</a> into OpenFOAM 10.
+The aggregation kernel for solid particles by <a href="https://doi.org/10.1006/JCIS.1994.1234" target="_blank">Adachi et al. (1994)</a> is <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">implemented</a> into OpenFOAM v10.
 $$
 a_{d,d^\prime} = \frac{4}{3}\sqrt{\frac{3\pi}{10}}\sqrt{\frac{\varepsilon}{\nu}}\left(d+d^\prime\right)^3
 $$
@@ -119,7 +119,7 @@ where $d$ and $d^\prime$ are the diameters of two colliding particles.
 
 ---
 # Breakage kernel
-The breakage kernel for solid particles by <a href="https://doi.org/10.6100/IR362582" target="_blank">Kusters (1991)</a> is <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">implemented</a> into OpenFOAM 10.
+The breakage kernel for solid particles by <a href="https://doi.org/10.6100/IR362582" target="_blank">Kusters (1991)</a> is <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">implemented</a> into OpenFOAM v10.
 
 $$
 b_{v^\prime} = \sqrt{\frac{4}{15\pi}}\sqrt{\frac{\varepsilon}{\nu}}\exp\left(-\frac{\varepsilon_\mathrm{cr}}{\varepsilon}\right)
@@ -160,13 +160,13 @@ On-going work is made to determine the best suited design for marine installatio
 ---
 
 # Source files
-The presented 90° pipe bend is <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/0999cd0efea8811f6d98c631f5ff3a53f6efb2d9" target="_blank">published</a> to OpenFOAM 10 of The OpenFOAM Foundation.
+The presented 90° pipe bend is <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/0999cd0efea8811f6d98c631f5ff3a53f6efb2d9" target="_blank">published</a> to OpenFOAM v10 of The OpenFOAM Foundation.
 
 The tutorial is located under the `multiphaseEulerFoam` tutorials.
 ```
 $FOAM_TUTORIALS/multiphase/multiphaseEulerFoam/RAS/pipeBend
 ```
-The Saffman-Mei lift force model, the aggregation kernel and the breakage kernel are also <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">published</a> to OpenFOAM 10.
+The Saffman-Mei lift force model, the aggregation kernel and the breakage kernel are also <a href="https://github.com/OpenFOAM/OpenFOAM-dev/commit/b4bcb29d6a8d8cc0b7576934ece1f0fafaddfccc" target="_blank">published</a> to OpenFOAM v10.
 
 
 ---
